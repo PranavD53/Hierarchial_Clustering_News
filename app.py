@@ -30,7 +30,7 @@ st.sidebar.header("📂 Dataset Upload")
 uploaded_file = st.sidebar.file_uploader("Upload CSV File", type=["csv"])
 
 if uploaded_file:
-    df = pd.read_csv(uploaded_file)
+    df = pd.read_csv(uploaded_file,encoding='latin1')
 
     st.sidebar.success("Dataset Loaded Successfully")
 
